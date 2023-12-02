@@ -20,4 +20,9 @@ public class ProductService implements com.alexc.springbootsearchrestapi.service
         List<Product> products = productRepository.searchProducts(query);
         return products;
     }
+
+    @Override
+    public Product createProduct(Product product) {
+        return productRepository.save(product);
+    }
 }
